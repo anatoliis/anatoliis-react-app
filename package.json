@@ -1,25 +1,44 @@
 {
-  "name": "sample",
+  "name": "anatoliis-react-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --pattern 'src/**/*'"
+    }
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
+    "@craco/craco": "^5.6.4",
+    "@datorama/akita": "^5.2.2",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "antd": "^4.6.1",
+    "craco-antd": "^1.18.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "rxios": "^2.0.0",
+    "sass": "^1.26.10",
     "typescript": "~3.7.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "import-sort-style-module": "^6.0.0",
+    "prettier": "^2.1.1",
+    "prettier-plugin-import-sort": "^0.0.4",
+    "pretty-quick": "^3.0.0",
+    "progress-bar-webpack-plugin": "^2.1.0"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
